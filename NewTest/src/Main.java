@@ -1,4 +1,14 @@
+import java.util.Scanner;
+
 public class Main {
+    public static void main(String[] argv) {
+        while (true) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter your grade: ");
+            int score = Integer.parseInt(scanner.next());
+            System.out.printf("Your grade is %s ! \n", letterGrade(score));
+        }
+    }
     public static char letterGrade(int score) {
         char grade;
         if (score <0 || score > 100)    grade = 'X';
